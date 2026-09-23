@@ -1,18 +1,18 @@
 package it.faiella.threadcondiviso;
 
 public class Contatore {
-   private int valore=0;
-   private int valore_max=10;
+   private int valore;
+   private int valore_max;
 
-public Contatore(int valore , int valore_max ){
-    this.valore= valore;
-    this.valore_max=valore_max;
+public Contatore(){
+    this.valore= 0;
+    this.valore_max=10;
 
 }
  public boolean incrementa(String nomeThread){
     if (valore<valore_max) {
         valore++;
-        System.out.println(nomeThread+"ha incrementato il valore di 1");
+        System.out.println(nomeThread+"ha incrementato il valore di 1 ora è "+valore);
 
         return true;
     }
